@@ -4867,8 +4867,8 @@ int mi_dsi_panel_set_disp_param(struct dsi_panel *panel, struct disp_feature_ctl
 			mi_dsi_update_timing_switch_and_flat_mode_cmd(panel, DSI_CMD_SET_MI_FLAT_MODE_OFF);
 			dsi_panel_tx_cmd_set(panel, DSI_CMD_SET_MI_FLAT_MODE_OFF);
 		}
-		rc = mi_dsi_panel_set_lhbm_fod_locked(panel, ctl);
 		mi_cfg->feature_val[DISP_FEATURE_LOCAL_HBM] = ctl->feature_val;
+		rc = mi_dsi_panel_set_lhbm_fod_locked(panel, ctl);
 		break;
 	case DISP_FEATURE_SENSOR_LUX:
 		DISP_DEBUG("DISP_FEATURE_SENSOR_LUX=%d\n", ctl->feature_val);
